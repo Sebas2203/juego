@@ -1,0 +1,56 @@
+body{
+    /* fondo  */
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image:  linear-gradient(#3b3b3b 4px, transparent 4px), linear-gradient(to right, #3b3b3b 4px, #000000 4px);
+    background-size: 80px 80px;
+
+    /* ajustes de la pantalla */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+h1{
+    font-size: 7rem;
+    color: whitesmoke;
+}
+
+#opciones{
+    margin-bottom: 30px;
+}
+
+#opciones button{
+    font-size: 10rem;
+    margin: 0 10px;
+    border-radius: 15px;
+    background-color: #d8d8d8;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+}
+
+#opciones button:hover{
+    background-color: #a7a7a7;
+}
+
+#jugadorPantalla, #compuPantalla{
+    font-size: 3rem;
+}
+
+#resultadoPantalla{
+    font-size: 5rem;
+}
+
+.textoVerde{
+    color: green;
+}
+
+.textRojo{
+    color: red;
+}
+
+
+
