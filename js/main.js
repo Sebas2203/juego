@@ -18,24 +18,28 @@ function jugar(opcionJugador){
         resultado = "¡EMPATE!";
     }
     else{
-        switch(resultado){
-            case "piedra":
-                resultado = (opcionCompu === "piedra") ? "GANASTE" : "PERDISTE";
-                break;
+        // piedra 
+        if (opcionJugador == "piedra" && opcionCompu == "papel"){
+            resultado = "PERDISTE";
+        }
+        else if (opcionJugador == "piedra" && opcionCompu == "tijeras"){
+            resultado = "GANASTE";
+        }
 
-            case "piedra":
-                resultado = (opcionCompu === "papel") ? "GANASTE" : "PERDISTE";
-                break;
-
-            case "piedra":
-                resultado = (opcionCompu === "tijera") ? "GANASTE" : "PERDISTE";
-                break;
+        // papel 
+        if (opcionJugador == "papel" && opcionCompu == "piedra"){
+            resultado = "GANASTE";
+        }
+        else if (opcionJugador == "papel" && opcionCompu == "tijeras"){
+            resultado = "PERDISTE";
         }
     }
 
     jugadorPantalla.textContent = "JUGADOR:" + opcionJugador;
     compuPantalla.textContent = "COMPUTADORA:" + opcionCompu;
     resultadoPantalla.textContent = resultado;
+
+    resultadoPantalla.classList.remove("textoVerde","textoRojo")
 
     switch (resultado){
         case "GANASTE":

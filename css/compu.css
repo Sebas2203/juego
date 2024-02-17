@@ -45,11 +45,13 @@ h1{
 }
 
 .textoVerde{
-    color: green;
+    color: rgb(37, 255, 37);
+    font-weight: bold
 }
 
-.textRojo{
+.textoRojo{
     color: red;
+    font-weight: bold
 }
 
 
