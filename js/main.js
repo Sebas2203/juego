@@ -14,26 +14,17 @@ function jugar(opcionJugador){
 
     let resultado = "";
 
-    if(opcionJugador === opcionCompu){
-        resultado = "¡EMPATE!";
-    }
-    else{
-        // piedra 
-        if (opcionJugador == "piedra" && opcionCompu == "papel"){
-            resultado = "PERDISTE";
-        }
-        else if (opcionJugador == "piedra" && opcionCompu == "tijeras"){
-            resultado = "GANASTE";
-        }
 
-        // papel 
-        if (opcionJugador == "papel" && opcionCompu == "piedra"){
-            resultado = "GANASTE";
-        }
-        else if (opcionJugador == "papel" && opcionCompu == "tijeras"){
-            resultado = "PERDISTE";
-        }
+    if (opcionJugador === opcionCompu) {
+        resultado = 'EMPATE';
     }
+    else if ((opcionJugador === 'piedra' && opcionCompu === 'tijera') || (opcionJugador === 'papel' && opcionCompu === 'piedra') || (opcionJugador === 'tijera' && opcionCompu === 'papel')) {
+        resultado = 'GANASTE';
+    } 
+    else {
+        resultado = 'PERDISTE';
+    }
+
 
     jugadorPantalla.textContent = "JUGADOR:" + opcionJugador;
     compuPantalla.textContent = "COMPUTADORA:" + opcionCompu;
